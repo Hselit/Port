@@ -1,0 +1,155 @@
+<html>
+	<head>
+		<title>Contact Page</title>
+		<link rel="icon" href="./fav.png">
+		 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+		 <style>
+			body{
+				background-color:black;
+				margin:0;
+			}
+			
+			ul{
+				margin-right:10vh;
+				margin-top:8vh;
+				display:flex;
+				
+				}
+			li{
+				list-style:none;
+				padding:0.5rem;
+				text-align:center;
+				}
+			li a{
+				text-decoration:none;
+				color:#1cff10;
+				font-size:1.5rem;
+				margin-left:10px;
+				}
+			li a:hover{
+				text-decoration:underline;
+				text-decoration-color:white;
+				}
+			.nav li:nth-of-type(1){
+			
+				margin-left:auto;
+				
+				}
+			h2{
+				color:#1cff10;
+				margin:10vh;
+				}
+				
+			h3{
+				color:#1cff10;
+				}
+				
+			.con{
+			background-color:aqua;
+    border-radius: 5px;
+    width: 60vh;
+    height:75vh;
+    padding: 50px;
+    margin:50px auto;
+    justify-content: center;
+    box-shadow: 0px 0px 15px black;
+}
+.btn{
+    width: 100%;
+    background-color:blue;
+    justify-content: center;
+}
+.btn:hover{
+    color: black;
+    box-shadow: 0px 0px 15px blue;
+}
+h1{
+    text-align: center;
+}
+label{
+    font-weight: bold;
+}
+input{
+    margin-bottom: 15px;
+}
+.direct{
+	margin:10vh;
+	padding:3vh;
+	text-align:center;
+	}
+.direct a{
+	color:white;
+	}
+.direct a:hover{
+	text-decoration:none;
+	}
+		</style>
+	</head>
+	<body>
+		<div class="nav">
+			<ul>
+				<li><a id="first" href="index.html">Home</a></li>
+				<li><a href="project.html">Projects</a></li>
+				<li><a id="last" href="about.html">About</a></li>
+			</ul>
+		</div>
+			
+		<div class="con">
+        <h1>Contact Me</h1>
+<form>
+  <div class="form-group">
+    <label for="exampleFormControlInput1">Name :</label>
+    <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="Enter the Name">
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput2">Email :</label>
+    <input type="email" class="form-control" id="exampleFormControlInput2" placeholder="name@gmail.com" required>
+  </div>
+  <div class="form-group">
+    <label for="exampleFormControlInput3">Subject :</label>
+    <input type="text" class="form-control" id="exampleFormControlInput3">
+  </div>
+
+  <div class="form-group">
+    <label for="exampleFormControlTextarea1">Message :</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" required rows="3"></textarea>
+  </div>
+  <button type="button" id="button" class="btn btn-light">Send</button>
+  
+</form>
+		</div>
+		<div class="direct">
+		<h3>Mail Directly in case of Problem</h3>
+		<button type="button" id="button" class="btn btn-dark">  <a href="mailto:tilesh162003@gmail.com">Send Email</a></button>
+</button>
+		</div>
+		<script src="https://smtpjs.com/v3/smtp.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+	<script>
+	
+		var b = document.getElementById("button");
+		b.addEventListener('click',function(e){
+			e.preventDefault();
+			var name = document.getElementById("exampleFormControlInput1").value;
+			var email = document.getElementById("exampleFormControlInput2").value;
+			var subject = document.getElementById("exampleFormControlInput3").value;
+			var message = document.getElementById("exampleFormControlTextarea1").value;
+			var body = 'Name: '+name+'<br/> Email : '+email+'<br/> Subject : '+subject+'<br/> Message: '+message; 
+			Email.send({
+			Host : "smtp.elasticemail.com",
+			Username : "hselit06@gmail.com",
+			Password : "rrqhwpfbaruwfdvo",
+			To : "hselit06@gmail.com",
+			From : email,
+			Subject : subject,
+			Body :body
+			}).then(message => alert(message));
+			console.log("success");
+			})
+			
+			
+		
+	</script>
+	</body>
+</html>

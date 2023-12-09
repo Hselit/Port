@@ -16,7 +16,7 @@
 	
 .neon{
 	font-size:1.5rem;
-	color:var(--clr-neon);
+	color:#1cff10;
 	cursor:pointer;
 	text-decoration:none;
 	border:currentColor .125em solid;
@@ -30,15 +30,17 @@
 
 
 .neon:hover,.neon:focus{
-	background-color:var(--clr-neon);
-	color:var(--clr-bg);
+	background-color:#1cff10;
+	color:black;
+	border:none;
 	text-shadow:none;
-	box-shadow: 0 0 2em 0.5em currentColor;
+	box-shadow: 0 0 2em 0.5em #1cff10;
 	
 	}
 	.game{
 		font-size:1rem;
 		color:pink;
+		text-align:center;
 		cursor:pointer;
 		text-decoration:none;
 		border:currentColor .125em solid;
@@ -83,18 +85,19 @@
         color: white;
       }
         h2{
-            color: aliceblue;
+            color: #1cff10;
             margin-left: 20px;
         }
 
       .alert-success{
         text-align: center;
 		width:100%;
-		height:10%;
+		height:5%;
       }
       
       #content{
         color: whitesmoke;
+		z-index:2;
         margin-left: 30px;
         margin-top: 100px;
         justify-content: center;
@@ -164,41 +167,57 @@
           }
 
         .animate__zoomIn{
-           float: left;
-           margin-left: 800px;
-           margin-top: -300px;
-           border-radius: 50px;
-        }
+           position:absolute;
+		   border-radius:50px;
+		   right:10%;
+		   bottom:15%;
+		   z-index:0;
+		   }
 
           ul {
-          list-style-type: none;
-          margin: 0;
-          padding: 0;
-          text-align:right;
+         flex:1;
+		 text-align:right;
+		 padding-right:40px;
 		  
         }
 
         li {
-          display: inline;
+          display: inline-block;
           font-size: 20px;
-          color: #ffff;
-			margin:1rem;
+		  list-style:none;
+          color:#1cff10;
 		  cursor:pointer;
+		  margin:10px 25px;
 			
         }
 		li a:hover{
-			text-decoration:none;
-			
+			text-decoration:line;
+			text-decoration-color:white;
 			}
-          
+         li a
+		 {
+		 font-size:1.5rem;
+		 }
       .blank{
 		width:100%;
 		height:80%;
+		}
+		.blank1{
+		width:100%;
+		height:60%;
 		}
 		.first{
 		width:100%;
 		height:100%;
 		}
+		
+		.aboutme{
+			font-size:3vh;
+			color:white;
+			padding:5vh;
+			margin-left:auto;
+			}
+		
     </style>
      
 </head>
@@ -212,24 +231,23 @@
       <div>
       <h4 class="animate__animated animate__lightSpeedInRight animate__delay-1s" id="port" >Portfolio.</h4>
       <ul id="new">
-		<li><a href="can.html" ><button class="game">Game</button></a></li>
-        <li><a href="#">Home</a></li>
-        <li><a href="project.html">Projects</a></li>
-        <li><a href="#about">About</a></li>
-		
+		<li><a href="can.html" ><button style="margin:0px;" class="game">Game</button></a></li>
+        <li><a href="index.html" style="color:#1cff10;">Home</a></li>
+        <li><a href="project.html" style="color:#1cff10;">Projects</a></li>
+        <li><a href="about.html" style="color:#1cff10;">About</a></li>
+		<li><a href="contact.html" style="color:#1cff10;">Contact</a></li>
       </ul>
     </div>
 	
     <h3 id="name" class="animate__animated animate__hinge animate__delay-2s">Welcome to My Portfolio</h3>
     <div id="content">
-        <h2 class="animate__animated animate__fadeInLeftBig animate__delay-3s">Tilesh T K</h2>
-        <h4 class="animate__animated animate__fadeInRightBig animate__delay-4s">Engineeering Graduate</h4>
-        <h5 class="animate__animated animate__bounceIn animate__delay-5s">Person with a hungry for knowledge, 
-            and driven to explore new horizons<br> in life, seeking opportunities to contribute and grow in a dynamic<br> professional environment.</h5>
+        <h2 class="animate__animated animate__fadeInLeftBig animate__delay-3s">I'm <span class="type-text"></span></h2>
+       <!-- <h4 class="animate__animated animate__fadeInRightBig animate__delay-4s">Engineeering Graduate</h4>-->
+        <h5 class="animate__animated animate__bounceIn animate__delay-5s">Growth Mindset Person, seeking opportunities to contribute and<br> grow in a dynamic professional environment and driven to explore<br> new horizons in life,</h5>
     <br><br>
     </div>
 	
-		<a href="https://drive.google.com/file/d/1wZoGrzpW7HnrCqa3iPBtLd0vRtBgDS5T/view?usp=sharing" target="_blank"><button class="neon">Resume
+		<a id="resume-but" href="https://drive.google.com/file/d/1FLQMOke3t4vmhrHDtQKEcAnR-zYaIjVD/view?usp=sharing" target="_blank"><button class="neon">Resume
 	</button></a>
 	
         <div id="g">
@@ -237,7 +255,7 @@
 
         </div>
 		       </section>
-		<br><br><br><br><br><br><br><br><br>
+		<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 		<h2 id="follow"> FOLLOW ME ON </h2>
 		<br><br>
 		<section id="f">
@@ -269,8 +287,16 @@
 		  </div>
 		</div>
 		</section>
+		<section class="blank1">
+		</section>
+		<section>
+		<h2>ABOUT ME</h2>
+		<p class="aboutme">Hey Hi, I'm Tilesh 👋, a Engineering Graduate and Content Creater in LinkedIn.<br><br>
 
-		<br><br><br><br><br><br><br><br><br>
+I'm passionate about empowering individuals to live happier and wealthier lives by enlightening them with knowledge I'm learning about the Personal Finance.<br><br>
+
+I am passionate and learning about creating Websites,Join me on LinkedIn for a journey where code meets capital, exploring the diverse and exciting intersections of web development and finance.</p>
+		</section>
 		<section class="blank">
 		</section>
         <div id="footer">
@@ -287,9 +313,9 @@
             </a>
             </div>
             </div>
-
-
+	<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
     <script>
+	
         let timeout = setTimeout(alertFunc, 1000);
         var greet = document.getElementsByClassName("alert-success");
         
@@ -322,7 +348,12 @@
                     st.style.visibility="visible";
                     console.log("Button Visible")
                 }
-
+		var typed = new Typed(".type-text",{
+			strings:["        ","Tilesh Kathiresan","Engineering Graduate","Web Developer","Content Creater"],
+			typeSpeed:100,
+			backSpeed:100,
+			loop:true
+			});
     </script>
 
 </body>
